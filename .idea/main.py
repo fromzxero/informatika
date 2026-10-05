@@ -1,3 +1,6 @@
+c=input()
+
+
 print('Helo')
 
 
