@@ -1,0 +1,34 @@
+@startuml
+
+left to right direction
+
+actor "Читатель" as Reader
+actor "Автор" as Author
+
+rectangle "Система учета статей в журнале" {
+
+    usecase "Регистрация\n(Читатель/Автор)" as UC_Register
+
+    usecase "Поиск\nстатьи" as UC_Search
+    usecase "Добавление\nстатьи в\nизбранное" as UC_AddFavorite
+    usecase "Просмотр\nраздела\nИзбранное" as UC_Favorites
+    usecase "Просмотр\nстатьи" as UC_View
+
+    usecase "Добавление\nстатьи" as UC_Add
+    usecase "Удаление\nстатьи" as UC_Delete
+    usecase "Редактирование\nстатьи" as UC_Edit
+}
+
+Reader --> UC_Register
+Reader --> UC_Search
+Reader --> UC_AddFavorite
+Reader --> UC_Favorites
+Reader --> UC_View
+
+Author --> UC_Register
+Author --> UC_View
+Author --> UC_Add
+Author --> UC_Delete
+Author --> UC_Edit
+
+@enduml
