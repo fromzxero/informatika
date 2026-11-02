@@ -1,23 +1,3 @@
-#
-#
-#
-# import sqlite3
-#
-# # Подключаемся к нашей базе данных
-# conn = sqlite3.connect('C:/Users/drago/IdeaProjects/untitled/.idea/database/journal.db')
-# cursor = conn.cursor()
-#
-# # Пример: вытащить всех пользователей
-# cursor.execute("SELECT login, password FROM users")
-# users = cursor.fetchall()
-# print("Список пользователей:")
-# for user in users:
-#     print(f"Логин: {user[0]}, Пароль: {user[1]}")
-
-# Не забываем закрыть соединение
-#conn.close()
-
-
 from services.user_service import UserService
 from services.article_service import ArticleService
 from services.role_service import RoleService
@@ -46,7 +26,6 @@ def register():
         print("В базе данных нет ролей.")
         return
 
-    # Новые пользователи получают роль user
     user_role = next(
         (role for role in roles if role.name.lower() == "читатель"),
         None
