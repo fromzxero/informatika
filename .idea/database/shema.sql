@@ -1,7 +1,4 @@
-DROP TABLE IF EXISTS favorites;
-DROP TABLE IF EXISTS articles;
-DROP TABLE IF EXISTS users;
-DROP TABLE IF EXISTS roles;
+
 
 CREATE TABLE roles (
                        role_id INTEGER PRIMARY KEY AUTOINCREMENT,
