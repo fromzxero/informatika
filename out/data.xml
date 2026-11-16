@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<articles>
+    <article>
+        <article_id>1</article_id>
+        <title>Современные технологии</title>
+        <content>Статья о современных технологиях.</content>
+        <author>
+            <user_id>1</user_id>
+            <login>ivan</login>
+        </author>
+    </article>
+    <article>
+        <article_id>2</article_id>
+        <title>История науки</title>
+        <content>Статья об истории науки.</content>
+        <author>
+            <user_id>2</user_id>
+            <login>anna</login>
+        </author>
+    </article>
+    <article>
+        <article_id>3</article_id>
+        <title>Будущее образования</title>
+        <content>Статья о будущем образования.</content>
+        <author>
+            <user_id>1</user_id>
+            <login>ivan</login>
+        </author>
+    </article>
+    <article>
+        <article_id>4</article_id>
+        <title>животные</title>
+        <content>длдпыаитжлоытапиждлоыаптилджаыпоитлжыаподтиджаылптидыалптиэд</content>
+        <author>
+            <user_id>1</user_id>
+            <login>ivan</login>
+        </author>
+    </article>
+</articles>
