@@ -62,3 +62,36 @@ class ArticleRepository(BaseRepository):
         finally:
             self.close()
         return deleted
+
+
+    def get_all_with_authors(self) -> list[dict]:
+        connection = self.connect()
+        try:
+            cursor = connection.cursor()
+            cursor.execute("""
+                SELECT
+                    articles.article_id,
+                    articles.title,
+                    articles.content,
+                    articles.author_id,
+                    users.login
+                FROM articles
+                LEFT JOIN users
+                    ON articles.author_id = users.user_id
+            """)
+            rows = cursor.fetchall()
+        finally:
+            self.close()
+
+        return [
+            {
+                "article_id": row[0],
+                "title": row[1],
+                "content": row[2],
+                "author": {
+                    "user_id": row[3],
+                    "login": row[4]
+                } if row[3] is not None else None
+            }
+            for row in rows
+        ]

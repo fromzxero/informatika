@@ -2,7 +2,7 @@ from services.user_service import UserService
 from services.article_service import ArticleService
 from services.role_service import RoleService
 from services.favorite_service import FavoriteService
-
+from services.export_service import export_json, export_csv, export_xml, export_yaml
 from models.users import User
 from models.article import Article
 from models.favorite import Favorite
@@ -267,4 +267,8 @@ def main():
 
 
 if __name__ == "__main__":
+    export_json()
+    export_csv()
+    export_xml()
+    export_yaml()
     main()
